@@ -1,0 +1,56 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カスタムスクロールバー設定 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ルートポリラインのアニメーション効果 */
+@keyframes routeDashFlow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.animated-route-line {
+  animation: routeDashFlow 1.2s linear infinite;
+}
+
+/* Leafletポップアップのスタイル調整 */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.18) !important;
+  padding: 2px !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px !important;
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+.custom-spot-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
